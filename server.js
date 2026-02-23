@@ -1,15 +1,16 @@
 const express = require('express');
-const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
 
-// Serve static files from wwwroot
-app.use(express.static(path.join(__dirname)));
+// Serve all files in wwwroot (or your project folder)
+app.use(express.static(__dirname));
 
-app.get('/api/status', (req, res) => {
-  res.json({ status: 'UDAYRA is live', timestamp: new Date() });
+// Default route (optional)
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
 });
 
+// Use process.env.PORT for Azure
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`App running on port ${port}`);
 });
