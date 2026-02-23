@@ -1,12 +1,13 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
-// Serve all files in wwwroot (or your project folder)
-app.use(express.static(__dirname));
+// Serve all files from "public" folder
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Default route (optional)
+// Default route
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Use process.env.PORT for Azure
