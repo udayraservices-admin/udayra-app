@@ -1,0 +1,84 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+}
+
+/* Header */
+header {
+  background: #1e3a8a;
+  color: #fff;
+  padding: 15px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Container and cards */
+.container {
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: #eef2ff;
+}
+
+/* Status labels */
+.status-ready {
+  color: green;
+  font-weight: bold;
+}
+
+.status-pending {
+  color:orange;
+  font-weight: bold;
+}
+
+.status-missing {
+  color: red;
+  font-weight: bold;
+}
+
+/* Buttons */
+a.button {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+a.button:hover {
+  background: #1d4ed8;
+}
+
+/* Notes */
+.note {
+  font-size: 13px;
+  color: #555;
+  margin-top: 10px;
+}
