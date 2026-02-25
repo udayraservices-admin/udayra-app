@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UDAYRA - Trader Invoice Upload</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>UDAYRA - Invoice Upload (Trader View)</h1>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h3>Business Details</h3>
+    <p><strong>Business Name:</strong> X Traders</p>
+    <p><strong>GSTIN:</strong> 29ABCDE1234F1Z5</p>
+  </div>
+
+  <div class="card">
+    <h3>Select Month</h3>
+    <select>
+      <option>January 2026</option>
+      <option>February 2026</option>
+      <option>March 2026</option>
+    </select>
+  </div>
+
+  <div class="card">
+    <h3>Upload Invoice</h3>
+    <input type="file" accept=".pdf, .jpg, .png"><br><br>
+    <button class="button">Upload (Demo)</button>
+    <p class="note">
+      Supported formats: PDF, JPG, PNG.<br>
+      You can upload invoices generated from Tally, Vyapar, or any billing software.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Uploaded Invoices (Demo)</h3>
+    <table>
+      <tr>
+        <th>Invoice No</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>INV-001</td>
+        <td>05-01-2026</td>
+        <td>₹25,000</td>
+        <td class="status-ready">Upload</td>
+      </tr>
+      <tr>
+        <td>INV-002</td>
+        <td>12-01-2026</td>
+        <td>₹18,000</td>
+        <td class="status-ready">Upload</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <a href="ca-dashboard.html" class="button">Back to CA Dashboard</a>
+    <p class="note">
+      *UDAYRA only organizes invoices for GST preparation.<br>
+      GST filing is done by your CA on the GST portal.
+    </p>
+  </div>
+
+</div> <!-- end container -->
+
+</body>
+</html>
