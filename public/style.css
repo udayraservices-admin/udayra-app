@@ -82,3 +82,32 @@ a.button:hover {
   color: #555;
   margin-top: 10px;
 }
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  color: #2563eb;
+  front-weight: bold;
+}
+
+/* Tooltip text */
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 260px;
+  background-color: #111827;
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 120%;
+  left: 0;
+  font-size: 12px;
+}
+
+/* Show tooltip text on hover */
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
