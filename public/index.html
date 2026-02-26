@@ -177,4 +177,32 @@
       <p class="note">
         <em>
           UDAYRA లో AI రూపొందించిన అవుట్‌పుట్‌లు వివరణ కోసం మాత్రమే అందించబడతాయి.<br>
-          తుది GST
+          తుది GST రిటర్న్ ఫైలింగ్ ఎల్లప్పుడూ అర్హత కలిగిన చార్టర్డ్ అకౌంటెంట్ ద్వారా నిర్వహించబడుతుంది.<br>
+          అన్ని చట్టపరమైన నిర్ణయాలు మరియు ఫైలింగ్స్ CA బాధ్యతలో ఉంటాయి.
+        </em>
+      </p>
+    </div>
+
+    <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleDisclaimer()">తెలుగు వెర్షన్ చూడండి</button>
+  </section>
+
+  <script>
+    function toggleDisclaimer() {
+      const eng = document.getElementById('english-disclaimer');
+      const tel = document.getElementById('telugu-disclaimer');
+      const btn = document.querySelector('.toggle-btn');
+
+      if (eng.classList.contains('hidden')) {
+        eng.classList.remove('hidden');
+        tel.classList.add('hidden');
+        btn.textContent = "తెలుగు వెర్షన్ చూడండి";
+      } else {
+        eng.classList.add('hidden');
+        tel.classList.remove('hidden');
+        btn.textContent = "Back to English Version";
+      }
+    }
+  </script>
+</body>
+</html>
