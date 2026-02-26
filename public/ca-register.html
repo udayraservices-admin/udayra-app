@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <title>UDAYRA - CA Registration</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #d1fae5;
+            border: 1px solid #10b981;
+            border-radius: 6px;
+            color: #065f46;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,7 +26,7 @@
         <div class="card">
             <h3>Create CA Account</h3>
 
-            <form action="#" method="post">
+            <form id="caForm" action="#" method="post">
                 <label for="firmName">CA / Firm Name</label><br>
                 <input type="text" id="firmName" name="firmName" required><br><br>
 
@@ -33,17 +45,36 @@
                 <label for="pan">PAN Number</label><br>
                 <input type="text" id="pan" name="pan" maxlength="10" required><br><br>
 
-                <form onsubmit="event.preventDefault(); window.location.href='ca-dashboard.html';">
-  <!-- form fields here -->
-  <button type="submit">Register</button>
-</form>
-<a href="index.html" class="button secondary">Back to Home</a>
+                <button type="submit" class="button">Register</button>
             </form>
+
+            <!-- Success message -->
+            <div id="successMessage" class="success-message">
+                ✅ You have successfully registered in UDAYRA.<br>
+                Redirecting to CA Dashboard in 1 minute...
+            </div>
+
+            <!-- Back to Home -->
+            <a href="index.html" class="button secondary">Back to Home</a>
 
             <p class="note">
                 Only Chartered Accountants can register directly.
             </p>
         </div>
     </div>
+
+    <script>
+        document.getElementById("caForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // prevent default form submission
+
+            // Show success message
+            document.getElementById("successMessage").style.display = "block";
+
+            // Redirect after 60 seconds
+            setTimeout(function() {
+                window.location.href = "ca-dashboard.html";
+            }, 60000); // 60000 ms = 1 minute
+        });
+    </script>
 </body>
 </html>
