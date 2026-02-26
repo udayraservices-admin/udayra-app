@@ -1,11 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>UDAYRA - Home</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Simple toggle style */
-    .hidden { display: none; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px;
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .welcome-card {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 25px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .button-group {
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .button.primary {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .button.primary:hover {
+      background: #1d4ed8;
+    }
+
+    .button.secondary {
+      background: #e5e7eb;
+      color: #111;
+    }
+
+    .button.secondary:hover {
+      background: #d1d5db;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    #disclaimer {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f4f4f4;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+    }
+
     .toggle-btn {
       margin-top: 15px;
       padding: 8px 12px;
@@ -15,21 +84,12 @@
       border-radius: 4px;
       cursor: pointer;
     }
+
     .toggle-btn:hover {
       background: #1d4ed8;
     }
-    .button {
-      display: inline-block;
-      padding: 8px 12px;
-      margin: 5px 0;
-      background: #2563eb;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-    .button:hover {
-      background: #1d4ed8;
-    }
+
+    .hidden { display: none; }
   </style>
 </head>
 <body>
@@ -38,22 +98,25 @@
   </header>
 
   <!-- Registration Prompt -->
-  <section style="margin:20px 0; padding:15px; background:#eef2ff; border-radius:8px;">
+  <section class="welcome-card">
     <p>Would you like to register and get started?</p>
-    <a href="ca-register.html" class="button">CA Registration</a><br>
-    <a href="invite-user.html" class="button">Invite User</a><br>
-    <a href="trader-activate.html" class="button">Trader Access</a>
+    <div class="button-group">
+      <a href="ca-register.html" class="button primary">CA Registration</a>
+      <a href="invite-user.html" class="button secondary">Invite User</a>
+      <a href="trader-activate.html" class="button secondary">Trader Access</a>
+    </div>
   </section>
 
+  <!-- Navigation -->
   <nav>
-    <a href="ca-dashboard.html" class="button">CA Dashboard</a> |
-    <a href="gst-summary.html" class="button">GST Summary</a> |
-    <a href="trader-upload.html" class="button">Trader Upload</a> |
-    <a href="ready-to-file.html" class="button">Ready to File</a> |
+    <a href="ca-dashboard.html" class="button">CA Dashboard</a>
+    <a href="gst-summary.html" class="button">GST Summary</a>
+    <a href="trader-upload.html" class="button">Trader Upload</a>
+    <a href="ready-to-file.html" class="button">Ready to File</a>
   </nav>
 
   <!-- AI Usage Disclaimer Section -->
-  <section id="disclaimer" style="margin:40px 0; padding:20px; background:#f4f4f4; border:1px solid #e5e5e5; border-radius:8px;">
+  <section id="disclaimer">
     <h2 style="color:#fa8383;">AI Usage Disclaimer</h2>
 
     <!-- English Version -->
@@ -114,33 +177,4 @@
       <p class="note">
         <em>
           UDAYRA లో AI రూపొందించిన అవుట్‌పుట్‌లు వివరణ కోసం మాత్రమే అందించబడతాయి.<br>
-          తుది GST రిటర్న్ ఫైలింగ్ ఎల్లప్పుడూ అర్హత కలిగిన చార్టర్డ్ అకౌంటెంట్ ద్వారా నిర్వహించబడుతుంది.<br>
-          అన్ని చట్టపరమైన నిర్ణయాలు మరియు ఫైలింగ్స్ CA బాధ్యతలో ఉంటాయి.
-        </em>
-      </p>
-    </div>
-
-    <!-- Toggle Button -->
-    <button class="toggle-btn" onclick="toggleDisclaimer()">తెలుగు వెర్షన్ చూడండి</button>
-  </section>
-
-  <script>
-    function toggleDisclaimer() {
-      const eng = document.getElementById('english-disclaimer');
-      const tel = document.getElementById('telugu-disclaimer');
-      const btn = document.querySelector('.toggle-btn');
-
-      if (eng.classList.contains('hidden')) {
-        eng.classList.remove('hidden');
-        tel.classList.add('hidden');
-        btn.textContent = "తెలుగు వెర్షన్ చూడండి";
-      } else {
-        eng.classList.add('hidden');
-        tel.classList.remove('hidden');
-        btn.textContent = "Back to English Version";
-      }
-    }
-  </script>
-
-</body>
-</html>
+          తుది GST
