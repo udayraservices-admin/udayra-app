@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UDAYRA - Invite User</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Invite User</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h3>Send Invitation</h3>
+
+            <form action="#" method="post">
+                <label for="userName">User Name</label><br>
+                <input type="text" id="userName" name="userName" required><br><br>
+
+                <label for="userEmail">User Email</label><br>
+                <input type="email" id="userEmail" name="userEmail" required><br><br>
+
+                <label for="role">Role</label><br>
+                <select id="role" name="role" required>
+                    <option value="">-- Select Role --</option>
+                    <option value="accountant">Accountant</option>
+                    <option value="staff">Staff</option>
+                    <option value="auditor">Auditor</option>
+                </select><br><br>
+
+                <button type="submit">Invite</button>
+            </form>
+
+            <p class="note">
+                Invited users get limited access based on role.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
