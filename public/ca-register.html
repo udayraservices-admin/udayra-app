@@ -33,7 +33,11 @@
                 <label for="pan">PAN Number</label><br>
                 <input type="text" id="pan" name="pan" maxlength="10" required><br><br>
 
-                <button type="submit">Register</button>
+                <form onsubmit="event.preventDefault(); window.location.href='ca-dashboard.html';">
+  <!-- form fields here -->
+  <button type="submit">Register</button>
+</form>
+<a href="index.html" class="button secondary">Back to Home</a>
             </form>
 
             <p class="note">
