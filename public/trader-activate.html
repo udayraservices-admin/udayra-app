@@ -16,8 +16,20 @@
                 Your CA has invited you to upload invoices for GST preparation.
             </p>
 
-            <button class="button" onclick="window.location.href='trader-upload.html';">Continue to Upload</button>
-<a href="index.html" class="button secondary">Back to Home</a>
+            <!-- Option 1: Button with JavaScript redirect -->
+            <button class="button" onclick="window.location.href='trader-upload.html';">
+                Continue to Upload
+            </button>
+
+            <!-- Option 2: Form-based redirect (always works) -->
+            <!--
+            <form action="trader-upload.html" method="get">
+                <button type="submit" class="button">Continue to Upload</button>
+            </form>
+            -->
+
+            <!-- Back to Home -->
+            <a href="index.html" class="button secondary">Back to Home</a>
 
             <p class="note">
                 You can upload invoices and mark the month complete.<br>
